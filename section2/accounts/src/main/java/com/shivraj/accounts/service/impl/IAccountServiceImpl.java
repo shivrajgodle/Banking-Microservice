@@ -39,8 +39,6 @@ public class IAccountServiceImpl implements IAccountService {
         if(optionalCustomer.isPresent()){
             throw new CustomerAlreadyExistsException("Customer already registered with given mobile number "+customerDto.getMobileNumber());
         }
-        customer.setCreatedBy("SBI");
-        customer.setCreatedAt(LocalDateTime.now());
         customerRespository.save(customer);
         accountsRepository.save(createNewAccount(customer));
     }
@@ -102,9 +100,6 @@ public class IAccountServiceImpl implements IAccountService {
         long randomNumber = (long) Math.floor(Math.random() * 9000000000L) + 1000000000L;
         //long randomNumber = 1000000000L + new Random().nextInt(900000000);
         newAccount.setAccountNumber(randomNumber);
-
-        newAccount.setCreatedBy("SBI");
-        newAccount.setCreatedAt(LocalDateTime.now());
 
         newAccount.setAccountType(AccountConstants.SAVINGS);
         newAccount.setBranchAddress(AccountConstants.ADDRESS);
