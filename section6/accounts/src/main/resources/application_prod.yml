@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+
+build:
+  version: "1.0"
+
+
+accounts:
+  message: "Welcome to VPG Bank Accounts Service related local api's"
+  contactDetails:
+    name: "sam Doe - product owner"
+    email: "sam.doe@vpgbank.com"
+  onCallSupport:
+    -(955) 955-1234
+    -(955) 955-4321

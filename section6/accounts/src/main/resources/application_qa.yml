@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+
+
+build:
+  version: "2.0"
+
+
+accounts:
+  message: "Welcome to VPG Bank Accounts Service related local api's"
+  contactDetails:
+    name: "donaldDoe - QA Lead"
+    email: "donald.doe@vpgbank.com"
+  onCallSupport:
+    -(755) 755-1234
+    -(755) 755-4321
